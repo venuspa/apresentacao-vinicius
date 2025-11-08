@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação Profissional - Vinicius Araujo</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+        const { User, Target, TrendingUp, Users, Brain, Handshake, Rocket, Heart, ChevronLeft, ChevronRight } = lucide;
+
+        const Apresentacao = () => {
+          const [slideAtual, setSlideAtual] = useState(0);
+
+          const slides = [
+            {
+              icon: User,
+              titulo: "Prazer, Vinicius",
+              subtitulo: "Quem está chegando",
+              conteudo: (
+                <div className="space-y-6 text-left">
+                  <p className="text-xl leading-relaxed">
+                    Meu nome é <strong>Vinicius Souza de Araujo</strong>. Tenho 40 anos, sou brasiliense, 
+                    casado e pai do Tito — que nasceu em 2024 e mudou completamente como enxergo propósito 
+                    e legado.
+                  </p>
+                  <p className="text-lg leading-relaxed text-gray-700">
+                    Sou Administrador, pós-graduado em <strong>Big Data & Business Analytics</strong> e 
+                    <strong> Finanças Executivas</strong>.
+                  </p>
+                  <p className="text-lg leading-relaxed text-gray-700">
+                    Nos últimos anos, atuei como <strong>Gerente Financeiro da UNIPAR</strong> — uma das 
+                    maiores instituições de ensino do Paraná, com mais de 23 mil alunos.
+                  </p>
+                  <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border-l-4 border-blue-600">
+                    <p className="text-lg font-medium text-gray-800">
+                      Minha filosofia é simples: transformar áreas financeiras em <strong>centros de 
+                      inteligência estratégica</strong>, onde dados viram decisões e pessoas viram 
+                      protagonistas.
+                    </p>
+                  </div>
+                </div>
+              )
+            },
+            {
+              icon: Target,
+              titulo: "De onde partimos",
+              subtitulo: "O desafio que encontrei",
+              conteudo: (
+                <div className="space-y-6 text-left">
+                  <p className="text-xl leading-relaxed">
+                    Quando assumi a gestão financeira da UNIPAR, encontrei uma operação com <strong>grande 
+                    potencial</strong>, mas presa em processos do passado.
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-6 my-8">
+                    <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                      <h4 className="font-bold text-red-900 mb-3 text-lg">O Cenário em 2021-2022</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• Inadimplência em <strong>16,9%</strong></li>
+                        <li>• Processos manuais e papel</li>
+                        <li>• Calculadoras de bobina no dia a dia</li>
+                        <li>• Recebimento em dinheiro/espécie</li>
+                        <li>• Zero cultura de dados</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                      <h4 className="font-bold text-green-900 mb-3 text-lg">A Visão</h4>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• Digitalização completa</li>
+                        <li>• Gestão por indicadores</li>
+                        <li>• Equipes capacitadas e fortes</li>
+                        <li>• Inadimplência abaixo do mercado</li>
+                        <li>• Financeiro estratégico</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <p className="text-lg text-gray-700 italic">
+                    O desafio era claro: modernizar a operação sem perder o humano no processo.
+                  </p>
+                </div>
+              )
+            },
+            {
+              icon: TrendingUp,
+              titulo: "Modernização Total",
+              subtitulo: "A base de tudo: sistemas e processos",
+              conteudo: (
+                <div className="space-y-6 text-left">
+                  <p className="text-lg leading-relaxed text-gray-700">
+                    Construímos um ecossistema integrado que eliminou processos manuais e trouxe 
+                    rastreabilidade, controle e eficiência para toda a operação.
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-4 my-6">
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h5 className="font-bold text-blue-900 mb-2">Lyceum</h5>
+                      <p className="text-sm text-gray-700">Gestão acadêmico-financeira modernizada</p>
+                    </div>
+                    
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h5 className="font-bold text-blue-900 mb-2">Sênior</h5>
+                      <p className="text-sm text-gray-700">Integração contábil, fiscal e RH</p>
+                    </div>
+                    
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h5 className="font-bold text-blue-900 mb-2">Paytrack</h5>
+                      <p className="text-sm text-gray-700">Automação de despesas e controles</p>
+                    </div>
+                    
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h5 className="font-bold text-blue-900 mb-2">Agydesk</h5>
+                      <p className="text-sm text-gray-700">Gestão de descontos e bolsas</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg mt-6">
+                    <h4 className="font-bold text-gray-800 mb-4 text-lg">Conquistas da Modernização:</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span><strong>100% digital:</strong> Fim do recebimento em espécie</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span><strong>Alçadas digitalizadas:</strong> Rastreabilidade em tempo real</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span><strong>Débito recorrente:</strong> Combate proativo à inadimplência</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span><strong>NF digitalizada:</strong> Redução drástica de tempo e erros</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )
+            },
+            {
+              icon: TrendingUp,
+              titulo: "O Resultado Mais Impactante",
+              subtitulo: "Central de Negociação: de 16,9% para 2,28%",
+              conteudo: (
+                <div className="space-y-6 text-left">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-8 rounded-xl shadow-lg">
+                    <h3 className="text-3xl font-bold mb-2">R$ 71,54 milhões</h3>
+                    <p className="text-xl">recuperados em créditos (2023-2025)</p>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-4 my-6">
+                    <div className="bg-red-100 p-6 rounded-lg text-center border-2 border-red-300">
+                      <div className="text-4xl font-bold text-red-700">16,9%</div>
+                      <div className="text-sm text-gray-700 mt-2">Inadimplência em 2021</div>
+                    </div>
+                    
+                    <div className="flex items-center justify-center">
+                      <div className="text-4xl text-gray-400">→</div>
+                    </div>
+                    
+                    <div className="bg-green-100 p-6 rounded-lg text-center border-2 border-green-300">
+                      <div className="text-4xl font-bold text-green-700">2,28%</div>
+                      <div className="text-sm text-gray-700 mt-2">Inadimplência em 2024</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h4 className="font-bold text-gray-800 mb-4">Como chegamos lá:</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• <strong>Canais exclusivos:</strong> Agydesk, WhatsApp, telefone</li>
+                      <li>• <strong>Acordos online:</strong> Lyceum + Confissão Digital (D4Sign)</li>
+                      <li>• <strong>Política de cobrança clara</strong> e humanizada</li>
+                      <li>• <strong>Metas + remuneração variável</strong> para o time</li>
+                      <li>• <strong>Acompanhamento psicológico</strong> para colaboradoras</li>
+                      <li>• <strong>Disparos proativos</strong> personalizados</li>
+                    </ul>
+                  </div>
+
+                  <p className="text-lg text-gray-700 italic mt-4">
+                    Hoje temos uma das <strong>menores taxas de inadimplência do setor educacional</strong> brasileiro.
+                  </p>
+                </div>
+              )
+            },
+            {
+              icon: Brain,
+              titulo: "Gestão por Indicadores",
+              subtitulo: "Do 'achismo' às decisões baseadas em dados",
+              conteudo: (
+                <div className="space-y-6 text-left">
+                  <p className="text-xl leading-relaxed">
+                    Implantamos uma <strong>cultura real de Business Intelligence</strong> que mudou 
+                    completamente como a empresa toma decisões.
+                  </p>
+
+                  <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-xl shadow-lg text-center">
+                    <h3 className="text-5xl font-bold mb-2">22</h3>
+                    <p className="text-2xl">dashboards de BI desenvolvidos internamente</p>
+                    <p className="text-lg mt-4 opacity-90">
+                      Usados diariamente por Diretores, Gerentes e Coordenadores
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6 my-6">
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h4 className="font-bold text-gray-800 mb-3">Antes</h4>
+                      <ul className="space-y-2 text-gray-700 text-sm">
+                        <li>❌ Decisões baseadas em "achismo"</li>
+                        <li>❌ Relatórios manuais demorados</li>
+                        <li>❌ Informações desencontradas</li>
+                        <li>❌ Falta de visibilidade em tempo real</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="bg-green-50 p-6 rounded-lg">
+                      <h4 className="font-bold text-gray-800 mb-3">Hoje</h4>
+                      <ul className="space-y-2 text-gray-700 text-sm">
+                        <li>✓ Decisões orientadas por dados</li>
+                        <li>✓ Indicadores em tempo real</li>
+                        <li>✓ Visão 360º da operação</li>
+                        <li>✓ Cultura analítica consolidada</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-600">
+                    <p className="text-gray-800">
+                      <strong>Indicadores implementados:</strong> Fluxo de caixa, inadimplência, 
+                      FIES, PROUNI, despesas, receitas, performance de unidades e muito mais.
+                    </p>
+                  </div>
+                </div>
+              )
+            },
+            {
+              icon: Users,
+              titulo: "O Legado Mais Importante",
+              subtitulo: "Desenvolvimento de pessoas e lideranças",
+              conteudo: (
+                <div className="space-y-6 text-left">
+                  <p className="text-xl leading-relaxed">
+                    De tudo que construímos, o que mais me orgulha é a <strong>transformação das pessoas</strong>.
+                  </p>
+
+                  <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+                    <p className="text-lg text-gray-800 leading-relaxed">
+                      Encontrei um time que tinha sido maltratado por gestões anteriores autoritárias. 
+                      Hoje, esse mesmo grupo é composto por <strong>líderes fortes</strong> que entregam 
+                      resultados extraordinários.
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 p-8 rounded-lg my-6">
+                    <h4 className="text-xl font-bold text-gray-800 mb-4 text-center">
+                      A Transformação Simbólica
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="text-center p-4">
+                        <div className="text-6xl mb-4">🧮</div>
+                        <p className="text-gray-700 font-medium">2023: Calculadoras de bobina</p>
+                      </div>
+                      <div className="text-center p-4">
+                        <div className="text-6xl mb-4">📊</div>
+                        <p className="text-gray-700 font-medium">2025: Excel avançado, BI, analytics</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h4 className="font-bold text-gray-800 text-lg">O que fizemos:</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span><strong>Treinamento intensivo</strong> em ferramentas modernas</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span><strong>Valorização e reconhecimento</strong> das conquistas</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span><strong>Formação de lideranças</strong> de dentro para dentro</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span><strong>Cultura de colaboração</strong> e não de medo</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-green-50 p-6 rounded-lg mt-6">
+                    <p className="text-gray-800 text-center italic">
+                      "Não deixei para trás apenas sistemas. Deixei <strong>pessoas preparadas</strong> 
+                      para continuar evoluindo."
+                    </p>
+                  </div>
+                </div>
+              )
+            },
+            {
+              icon: Handshake,
+              titulo: "Eficiência Financeira",
+              subtitulo: "Relacionamento bancário e otimização",
+              conteudo: (
+                <div className="space-y-6 text-left">
+                  <p className="text-xl leading-relaxed text-gray-700">
+                    Além da transformação digital e cultural, não deixamos de fazer o <strong>"básico bem feito"</strong> 
+                    do financeiro.
+                  </p>
+
+                  <div className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white p-8 rounded-xl shadow-lg text-center">
+                    <h3 className="text-4xl font-bold mb-2">R$ 732 mil</h3>
+                    <p className="text-xl">de saving estimado até fim de 2025</p>
+                    <p className="text-sm mt-4 opacity-90">
+                      através de renegociação de contratos bancários
+                    </p>
+                  </div>
+
+                  <div className="bg-gray-50 p-6 rounded-lg my-6">
+                    <h4 className="font-bold text-gray-800 mb-4">Outras entregas relevantes:</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span>Reorganização completa do fluxo de pagamentos</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span>Implantação de controles de conciliação automatizados</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span>Análise de elegibilidade para linhas de financiamento (FINAME/BNDES)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span>Pareceres técnicos em conformidade (Procon, FIES, legislação)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2 font-bold">✓</span>
+                        <span>Governança com alçadas e rastreabilidade total</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <p className="text-gray-800 italic text-center">
+                      Resultado: <strong>economia direta + ganho de poder de negociação institucional</strong>
+                    </p>
+                  </div>
+                </div>
+              )
+            },
+            {
+              icon: Heart,
+              titulo: "Meu Estilo de Gestão",
+              subtitulo: "Como eu trabalho",
+              conteudo: (
+                <div className="space-y-6">
+                  <div className="text-center mb-8">
+                    <p className="text-2xl font-medium text-gray-800 leading-relaxed">
+                      "Gestão com <strong className="text-blue-600">propósito</strong>, foco em{' '}
+                      <strong className="text-green-600">pessoas</strong> e decisões orientadas por{' '}
+                      <strong className="text-purple-600">dados</strong>"
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                      <h4 className="font-bold text-blue-900 mb-3 text-lg">Liderança</h4>
+                      <ul className="space-y-2 text-gray-700 text-sm">
+                        <li>• Humanizada e colaborativa</li>
+                        <li>• Autonomia com responsabilidade</li>
+                        <li>• Comunicação clara e transparente</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
+                      <h4 className="font-bold text-green-900 mb-3 text-lg">Processos</h4>
+                      <ul className="space-y-2 text-gray-700 text-sm">
+                        <li>• Simples, mas inteligentes</li>
+                        <li>• Orientados por dados</li>
+                        <li>• Governança sem burocracia</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
+                      <h4 className="font-bold text-purple-900 mb-3 text-lg">Resultados</h4>
+                      <ul className="space-y-2 text-gray-700 text-sm">
+                        <li>• Sustentáveis e mensuráveis</li>
+                        <li>• Baseados em indicadores</li>
+                        <li>• Foco no longo prazo</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg">
+                      <h4 className="font-bold text-orange-900 mb-3 text-lg">Cultura</h4>
+                      <ul className="space-y-2 text-gray-700 text-sm">
+                        <li>• Inovação e tecnologia</li>
+                        <li>• Aprendizado contínuo</li>
+                        <li>• Ética e empatia sempre</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-xl shadow-lg mt-8">
+                    <p className="text-xl text-center leading-relaxed">
+                      Vejo o financeiro não como uma área de controle, mas como o{' '}
+                      <strong>coração estratégico da empresa</strong> — onde dados se transformam 
+                      em decisões e pessoas em protagonistas.
+                    </p>
+                  </div>
+                </div>
+              )
+            },
+            {
+              icon: Rocket,
+              titulo: "O Que Eu Trago",
+              subtitulo: "Para esta nova jornada",
+              conteudo: (
+                <div className="space-y-8 text-center">
+                  <p className="text-2xl leading-relaxed text-gray-800">
+                    Essa é a bagagem que trago: uma visão de gestão financeira que integra{' '}
+                    <strong className="text-blue-600">Pessoas</strong>,{' '}
+                    <strong className="text-green-600">Processos</strong> e{' '}
+                    <strong className="text-purple-600">Tecnologia</strong> para gerar resultados.
+                  </p>
+
+                  <div className="grid md:grid-cols-3 gap-6 my-8">
+                    <div className="bg-blue-50 p-6 rounded-lg">
+                      <div className="text-5xl mb-4">👥</div>
+                      <h4 className="font-bold text-gray-800 mb-2">Pessoas</h4>
+                      <p className="text-sm text-gray-700">
+                        Desenvolvimento, liderança humanizada e protagonismo
+                      </p>
+                    </div>
+
+                    <div className="bg-green-50 p-6 rounded-lg">
+                      <div className="text-5xl mb-4">⚙️</div>
+                      <h4 className="font-bold text-gray-800 mb-2">Processos</h4>
+                      <p className="text-sm text-gray-700">
+                        Modernização, eficiência e governança inteligente
+                      </p>
+                    </div>
+
+                    <div className="bg-purple-50 p-6 rounded-lg">
+                      <div className="text-5xl mb-4">🚀</div>
+                      <h4 className="font-bold text-gray-800 mb-2">Tecnologia</h4>
+                      <p className="text-sm text-gray-700">
+                        BI, automação e decisões baseadas em dados
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10 rounded-2xl shadow-xl">
+                    <p className="text-3xl font-bold mb-4">Vamos construir juntos</p>
+                    <p className="text-xl mb-6">
+                      Estou muito animado para conhecer os desafios de vocês e aplicar toda 
+                      essa energia e metodologia aqui.
+                    </p>
+                    <p className="text-2xl font-bold mt-8">Muito obrigado pela confiança! 💙</p>
+                  </div>
+
+                  <p className="text-gray-600 italic mt-8">
+                    Pronto para começarmos este novo capítulo.
+                  </p>
+                </div>
+              )
+            }
+          ];
+
+          const proximoSlide = () => {
+            if (slideAtual < slides.length - 1) {
+              setSlideAtual(slideAtual + 1);
+            }
+          };
+
+          const slideAnterior = () => {
+            if (slideAtual > 0) {
+              setSlideAtual(slideAtual - 1);
+            }
+          };
+
+          const irParaSlide = (index) => {
+            setSlideAtual(index);
+          };
+
+          const SlideAtual = slides[slideAtual];
+          const IconeAtual = SlideAtual.icon;
+
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-4 md:p-8">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-6">
+                  <span className="text-sm text-gray-600">
+                    Slide {slideAtual + 1} de {slides.length}
+                  </span>
+                </div>
+
+                <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-8 min-h-[600px] flex flex-col">
+                  <div className="text-center mb-8">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4">
+                      <lucide-react icon={IconeAtual} className="w-10 h-10 text-white" />
+                    </div>
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+                      {SlideAtual.titulo}
+                    </h1>
+                    <p className="text-xl text-gray-600">
+                      {SlideAtual.subtitulo}
+                    </p>
+                  </div>
+
+                  <div className="flex-1">
+                    {SlideAtual.conteudo}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between mb-6">
+                  <button
+                    onClick={slideAnterior}
+                    disabled={slideAtual === 0}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
+                      slideAtual === 0
+                        ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        : 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
+                    }`}
+                  >
+                    <lucide-react icon={ChevronLeft} className="w-5 h-5" />
+                    Anterior
+                  </button>
+
+                  <button
+                    onClick={proximoSlide}
+                    disabled={slideAtual === slides.length - 1}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
+                      slideAtual === slides.length - 1
+                        ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        : 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
+                    }`}
+                  >
+                    Próximo
+                    <lucide-react icon={ChevronRight} className="w-5 h-5" />
+                  </button>
+                </div>
+
+                <div className="flex justify-center gap-2">
+                  {slides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => irParaSlide(index)}
+                      className={`h-2 rounded-full transition-all ${
+                        index === slideAtual
+                          ? 'w-8 bg-blue-600'
+                          : 'w-2 bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Ir para slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Apresentacao />);
+    </script>
+</body>
+</html>
