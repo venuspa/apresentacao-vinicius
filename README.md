@@ -12,7 +12,7 @@ Uma apresentação interativa sobre transformação financeira na educação, de
 - Basta abrir o arquivo `index.html` em qualquer navegador moderno.
 
 ## Visualização no GitHub Pages
-- Link do GitHub Pages: `[coloque aqui após publicar]`
+- Link do GitHub Pages: https://venuspa.github.io/apresentacao-vinicius/
 
 ## Seções Principais
 - Prazer, Vinicius — Quem está chegando
