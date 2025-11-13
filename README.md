@@ -11,8 +11,13 @@ Uma apresentação interativa sobre transformação financeira na educação, de
 ## Como Visualizar Localmente
 - Basta abrir o arquivo `index.html` em qualquer navegador moderno.
 
+## Apresentação ao Time
+- Nova apresentação voltada ao time financeiro (AP, AR, Tesouraria e Faturamento).
+- Abra o arquivo `index-time.html` para visualizar a versão destinada ao time.
+
 ## Visualização no GitHub Pages
-- Link do GitHub Pages: https://venuspa.github.io/apresentacao-vinicius/
+- Link principal: https://venuspa.github.io/apresentacao-vinicius/
+- Apresentação ao Time: https://venuspa.github.io/apresentacao-vinicius/index-time.html
 
 ## Seções Principais
 - Prazer, Vinicius — Quem está chegando
